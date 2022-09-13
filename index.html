@@ -1,0 +1,225 @@
+<html>
+    <head>
+        <title> Project 2</title>
+    </head>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="coupon1.css">
+    <script src="coupon1.js"></script>
+    <script>
+         const changeMode=()=>{
+            let mybody = document.body; 
+            mybody.classList.toggle('mydark') 
+         }
+    </script>
+    <body>
+    <header>
+        <div id="header1">
+       <!-- <span id="logo">E-mart</span> -->
+       <img src="images/logo.png" alt="logo" id="piclogo">
+<div id="sublogo">
+       <span >Best online</span> <br><span>shopping site!</span>
+     </div>
+
+     <!-- <form id="form" > 
+        <input id="inpt" type="Search " name="q" placeholder=" Search...">
+       <button>Search</button> 
+        
+      </form> -->
+
+      <div class="wrapper">
+        <img class="search-icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU2Ljk2NiA1Ni45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2Ljk2NiA1Ni45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMgIHMxMC4zMTgsMjMsMjMsMjNjNC43NjEsMCw5LjI5OC0xLjQzNiwxMy4xNzctNC4xNjJsMTMuNjYxLDE0LjIwOGMwLjU3MSwwLjU5MywxLjMzOSwwLjkyLDIuMTYyLDAuOTIgIGMwLjc3OSwwLDEuNTE4LTAuMjk3LDIuMDc5LTAuODM3QzU2LjI1NSw1NC45ODIsNTYuMjkzLDUzLjA4LDU1LjE0Niw1MS44ODd6IE0yMy45ODQsNmM5LjM3NCwwLDE3LDcuNjI2LDE3LDE3cy03LjYyNiwxNy0xNywxNyAgcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
+        <input class="search" placeholder="Search your Product here..." type="text" >
+        <img class="clear-icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjk3NiA1MS45NzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxLjk3NiA1MS45NzY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQuMzczLDcuNjAzYy0xMC4xMzctMTAuMTM3LTI2LjYzMi0xMC4xMzgtMzYuNzcsMGMtMTAuMTM4LDEwLjEzOC0xMC4xMzcsMjYuNjMyLDAsMzYuNzdzMjYuNjMyLDEwLjEzOCwzNi43NywwICAgQzU0LjUxLDM0LjIzNSw1NC41MSwxNy43NCw0NC4zNzMsNy42MDN6IE0zNi4yNDEsMzYuMjQxYy0wLjc4MSwwLjc4MS0yLjA0NywwLjc4MS0yLjgyOCwwbC03LjQyNS03LjQyNWwtNy43NzgsNy43NzggICBjLTAuNzgxLDAuNzgxLTIuMDQ3LDAuNzgxLTIuODI4LDBjLTAuNzgxLTAuNzgxLTAuNzgxLTIuMDQ3LDAtMi44MjhsNy43NzgtNy43NzhsLTcuNDI1LTcuNDI1Yy0wLjc4MS0wLjc4MS0wLjc4MS0yLjA0OCwwLTIuODI4ICAgYzAuNzgxLTAuNzgxLDIuMDQ3LTAuNzgxLDIuODI4LDBsNy40MjUsNy40MjVsNy4wNzEtNy4wNzFjMC43ODEtMC43ODEsMi4wNDctMC43ODEsMi44MjgsMGMwLjc4MSwwLjc4MSwwLjc4MSwyLjA0NywwLDIuODI4ICAgbC03LjA3MSw3LjA3MWw3LjQyNSw3LjQyNUMzNy4wMjIsMzQuMTk0LDM3LjAyMiwzNS40NiwzNi4yNDEsMzYuMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+<img class="micro" src="images/microphone.png" alt="microphn">
+         </div>
+
+<div id="download">
+    <span>Download App!</span><br>
+    <a href="dowldd" target="_blank">
+        
+        <img class="dwld" src="images/download.png"></a>
+</div>
+
+
+
+<div id="login">
+   <a href="#"> <span>Login/Sign Up</span></a>
+</div>
+    
+<div id="cart">
+   <a href="#" target="_blank"> <img src="images/cart.png" alt="cart"> </a>
+</div>
+
+<p class="glyphicon glyphicon-adjust"  onclick="changeMode() "></p>
+<div id="subb">
+   <span> Dark-Mode </span>
+
+</div>
+
+    <div id="profile">
+        <a href="#" target="_blank">  <img src="images/profile.png" alt="profile" ></a>
+
+    </div>
+        </div>
+        
+    </header>
+
+    <div id="coupon">
+        <button onclick="closecoupon()">&times;</button>
+
+    </div>
+
+    <!-- now category section -->
+<div id="categ">
+    <div class="cat">
+        <a href="Cloths"><b>Fashion</b></a>
+    </div>
+
+    <div class="cat">
+        <a href="Cloths"><b>Mobiles</b></a>
+    </div>
+
+
+    <div class="cat">
+        <a href="Cloths"><b>Electronics</b></a>
+    </div>
+
+    <div class="cat">
+        <a href="Cloths"><b>Home Usage</b></a>
+    </div>
+
+    <div class="cat">
+        <a href="Cloths"><b>Furniture</b></a>
+    </div>
+</div>
+
+
+<!-- offer page -->
+
+<div id="offer">
+    <img src="images/offer1.jpg" alt="offer1">
+</div>
+
+<div id="offer1">
+    <img src="images/offer4.webp" alt="offer1">
+</div>
+
+<div id="offer">
+    <img src="images/offer5.png" alt="offer1">
+</div>
+
+<div id="trending">
+
+    <a href="#" target="_blank"><img src="images/trend1.jpg"></a>
+        <a href="#" target="_blank"><img src="images/trend2.jpg"></a>
+            <a href="#" target="_blank"><img src="images/trend3.jpg"></a>
+                <a href="#" target="_blank"><img src="images/trend4.jpg"></a>
+
+
+</div>
+
+
+
+
+
+<h2><hr></h2>
+<div id="backm">
+<center>
+<div id="back">
+<SPAN> Back to Top &#8593</SPAN>
+</div>
+</center>
+</div>
+<hr>
+
+<div id="end">
+
+    <div class="end1">
+
+     <h3>More about us:</h3> 
+     <ul class="end2" style="line-height:2.5em;">
+        <!-- <li><a href="contact.com" target="_blank">Contact us</a></li> -->
+        <li> Contact us</li>
+
+        <li>  Abou us</li>
+
+        <li>  Careers</li>
+
+        <li>  Corporate Information</li>
+     </ul>
+    </div>
+
+
+ <div class="end1">
+   <h3>Policy:</h3>
+   <ul class="end2" style="line-height:2.5em;">
+            
+    <li>  Return Policy</li>
+
+    <li>  Term of use</li>
+
+    <li>  Security</li>
+
+    <li>  Privacy</li>
+ </ul>
+        
+    </div>
+
+
+    <div class="end1">
+        <h3>Help:</h3> 
+        <ul class="end2" style="line-height:2.5em;">
+            
+            <li>  Payments </li>
+    
+            <li> Shipping</li>
+    
+            <li>  Cancellation/Returns
+                </li>
+    
+            <li>   FAQ</li>
+         </ul>
+    </div>
+    <div class="end3">
+        
+        <h3>Office address:</h3> 
+        <span style="line-height:2.5em;">Emart Internet Private Limited,
+
+            Buildings Alyssa, Begonia &
+            
+            Clove Embassy Tech Village
+            
+            Outer Ring Road, Devarabeesanahalli Village,
+            
+            Bengaluru, 560103,
+            
+            Karnataka, India
+            
+            CIN : U51109KA201287PTC066107
+            
+            Telephone: 044-456bg14700 </span>  
+    </div>
+
+    <div id="social">
+        <a href="www.facebook.com" target="_blank">
+            <img src="images/fb.png" alt="fb" class="socialimg">
+        </a>
+    
+        <a href="www.insta.com" target="_blank">
+            <img src="images/insta.png" alt="insta"  class="socialimg">
+        </a>
+        <a href="www.youtube.com" target="_blank"  >                   <!--for icon to remain same u can copy its image address and paste it -->
+            <img src="images/yt.png" alt="yt" class="socialimg">
+        </a>
+    </div>
+</div>
+<script>
+    document.onload=loadcoupon()
+</script>
+
+</body>
+</html>
